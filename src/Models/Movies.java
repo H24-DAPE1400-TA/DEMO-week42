@@ -1,9 +1,15 @@
 package Models;
 
 public class Movies {
-    //MovieName
-    //Director
-    //Movielengt
-    
+    /**
+     * @Param MovieName
+     * @Param Director
+     * @Param  Movielength
+     * @Param generes
+     */
+
+
+
+
     //getters and setters, constructur
 }

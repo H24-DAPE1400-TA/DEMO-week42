@@ -1,11 +1,11 @@
 package Models;
 
 public class Music {
-    /*
-    Parameters:
-    music
-    artist
-    whereToListen
- */
-//getters and setters, constructur
+    /**
+    @Param<String>music
+    @Param<String>artist
+    @Param<String>album
+    @Param<String[]>whereToListen
+ **/
+//getters and setters, constructur and tostring
 }

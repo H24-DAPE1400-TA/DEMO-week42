@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Books {
-/*
-Name of book
-Author
-isbn
- */
+/**
+@Param Name of book
+@Param Author
+@Param isbn
+ **/
     //getters and setters, constructur
     private String bookName;
     private String author;
