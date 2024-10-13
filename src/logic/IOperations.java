@@ -1,8 +1,15 @@
 package logic;
 
+import Models.Books;
+import Models.Movies;
+import Models.Music;
+
 public interface IOperations {
-     void create();
-     void update();
-     void delete();
-     void emptyList();
+     boolean addToMusic(Music goodSong);
+     boolean deleteMusic(Music badSong);
+     boolean addBook(Books goodBook);
+     boolean deleteBook(Books badBook);
+     boolean addMovie(Movies goodMovie);
+     boolean deleteMovie(Movies badMovie);
+
 }
