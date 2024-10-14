@@ -5,8 +5,8 @@ We are going to focus on the behind the scene stuff, this means that it will be 
 
 **This is under GPL lisence, this means that you can do whatever you want with this repo as long as you dont profit off of it**
 
-|16/10/24: 12:30| Room xx | GPL v3 lisence | OsloMet |
-|---------------|---------|----------------|---------|
+|16/10/24: 12:30| Room PH131 | GPL v3 lisence | OsloMet |
+|---------------|------------|----------------|---------|
 ---
 ## Structure:  
 
