@@ -1,5 +1,9 @@
+import Models.Books;
 import Models.Music;
 import logic.Operations;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class main {
     public static void main(String[] args) {
@@ -12,6 +16,10 @@ public class main {
         for (String platform : platforms) {
             System.out.print(platform + " ");
         }
+        List<Books> songs = operations.loadBooks();
+        for (Books book : songs) {
+            System.out.println(book.getBookName() + "| Author: " + book.getAuthor());
+        }
         //aGoodSong = new Music("We are the world", "usa for africa", platforms);
         //anotherGoodSong = new Music("Redunant", "Green day","Nimrod", platforms);
         //theBestSong = new Music("Rockin' chair", "Oasis", "Whats the story, morning glory", platforms);
@@ -20,6 +28,5 @@ public class main {
         //add a book
         //add a movie
         //add a tune
-
     }
 }

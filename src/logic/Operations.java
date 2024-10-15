@@ -38,8 +38,10 @@ public class Operations implements IOperations  {
     }
 
     @Override
-    public boolean addBook(Books goodBook) {
-        return false;
+    public boolean addBook(Books goodBook, List<Books>booksList) {
+//we could add a bunch of logic here...
+        //checks if there are short
+        return booksList.add(goodBook);
     }
 
     @Override
@@ -68,4 +70,5 @@ public class Operations implements IOperations  {
     public static boolean emptyMusicList(List<Music> list) {
         return list.isEmpty();
     }
+
 }
