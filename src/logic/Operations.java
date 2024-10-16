@@ -24,39 +24,67 @@ public class Operations implements IOperations  {
     }
     public List<Music> loadMusic(Music[]array){
         //here we can demonstrate how we can use array to fill up lists
-        throw new UnsupportedOperationException("Not implemented yet");
+        List<Music> theBestMusic = new ArrayList<>();
+        for (Music music : array){
+            theBestMusic.add(music);
+        }
+        return theBestMusic;
     }
 
     @Override
-    public boolean addToMusic(Music goodSong) {
-        return false;
+    public boolean addToMusic(Music goodSong, List<Music>musicList) {
+        if (goodSong.getArtist().isEmpty()) {
+            System.out.println("Artist list is empty");
+            return false;
+        }
+        return musicList.add(goodSong);
     }
 
     @Override
-    public boolean deleteMusic(Music badSong) {
-        return false;
+    public boolean deleteMusic(Music badSong,List<Music>musicList) {
+        if (!musicList.contains(badSong)) {
+            System.out.println("Song not found, can not be deleted");
+            return false;
+        };
+        return musicList.remove(badSong);
     }
 
     @Override
     public boolean addBook(Books goodBook, List<Books>booksList) {
 //we could add a bunch of logic here...
+        if (goodBook.getIsbn().isEmpty()){
+            System.out.println("Empty ISBN number");
+            return false;
+        }
         //checks if there are short
         return booksList.add(goodBook);
     }
 
     @Override
-    public boolean deleteBook(Books badBook) {
-        return false;
+    public boolean deleteBook(Books badBook, List<Books>booksList) {
+        if (!booksList.contains(badBook)){
+            System.out.println("does not exists, can't be deleted");
+            return false;
+        }
+        return booksList.remove(badBook);
     }
 
     @Override
-    public boolean addMovie(Movies goodMovie) {
-        return false;
+    public boolean addMovie(Movies goodMovie,List<Movies>moviesList) {
+        if (goodMovie.getDirector().isEmpty()){
+            System.out.println("Not found director");
+            return false;
+        }
+        return moviesList.add(goodMovie);
     }
 
     @Override
-    public boolean deleteMovie(Movies badMovie) {
-        return false;
+    public boolean deleteMovie(Movies badMovie, List<Movies>moviesList) {
+        if (!moviesList.contains(badMovie)){
+            System.out.println("This movie is not in the list");
+            return false;
+        }
+        return moviesList.remove(badMovie);
     }
 
     public static boolean emptyBookList(List<Book> list) {
